@@ -1,0 +1,557 @@
+body {
+    //margin: 0;
+    //padding: 50px;
+    //background-image: url("../img/Screen\ Shot\ 2023-06-13\ at\ 12.23.03\ AM.png");
+    //background-size: cover;
+    background-color: $blue;
+}
+
+// ------ Landing page --------//
+.modal-first {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: #c2bb935b; /* transparent part of modal */
+  background-image: url("../img/ezgif.com-gif-maker.-speedmp4.mp4");
+  background-size: cover;
+  text-align: center;
+  font-family: "Forum", cursive;
+  color: $blue;
+}
+
+
+#close-button-greeting {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 25px;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 30px;
+  margin-top: 180px;
+  font-family: $body-font;
+  border: 2px solid $white;
+}
+
+.modal-first img.nz-tourism-logo {
+  width: 30%;
+  height: auto;
+  margin-bottom: 10px;
+  margin-top:  10px;
+}
+
+.modal-first h2 {
+  margin-bottom: 10px;
+  padding-bottom: 20px;
+  font-family: $header-font;
+  font-size: $header-font-size;
+}
+
+#close-button-greeting:hover {
+  background-color: $yellow;
+}
+
+// NAV BAR 
+
+nav {
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px; /* Adjust the height as needed */
+  margin-bottom: 50px;
+}
+
+nav h1 {
+  color: #0091eb;
+  font-family: $header-font;
+  font-size: $mobile-header-font-size;
+}
+
+.nav-div {
+  position: absolute;
+  top: 20px;
+  right: 0;
+  padding: 10px;
+  // background-color: #f0f0f0;
+  padding-right: 50px;
+  font-size: $body-font-size;
+  font-family: $body-font;
+}
+
+/* Form section */
+#container-for-form {
+  padding: 50px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 15px;
+  max-width: 580px; 
+  //max-width: 780px; /* Added max-width to limit the container's width */
+  //box-sizing: border-box; 
+  margin-bottom: 150px;
+}
+
+.form-group {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  font-size: $body-font-size;
+  font-family: $body-font;
+}
+
+label {
+  //flex: 0 0 200px;
+  text-align: right;
+  margin-right: 10px;
+  font-weight: bold;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+h4 {
+  font-size: $body-font-size;
+  font-family: $body-font;
+}
+
+select
+//[id="location-name"],
+//#location-name 
+{
+  flex: 1;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  //font-size: 14px;
+  width: 100%;
+  max-width: 300px; 
+}
+
+input[type="email"] {
+  padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+input[type="text"],
+input[type="number"] {
+  flex: 1;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  //font-size: 14px;
+  width: 100%;
+}
+
+.options-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  //grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  grid-gap: 10px;
+  //gap: 10px;
+  //flex-wrap: wrap;
+  justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+
+.option {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  width: 100px;
+  height: 100px;
+  //background-image: url("../img/original-2130d55f3e516c3dfa20b0d026a566bb.png");
+  background-color: white;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  //font-size: 14px;
+  cursor: pointer;
+}
+
+.option:hover {
+  background-color: #e0e0e0;
+}
+
+.option.selected {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.option[data-value="All"] {
+
+  background-size: 50%;
+  background-position: center;
+}
+
+.option[data-value="Hotel"] {
+  background-image: url("./images/hotel.png");
+  background-repeat: no-repeat; 
+  background-size: 50%;
+  background-position: center;
+}
+.option[data-value="Hostel"] {
+  background-image: url("./images/hostel1.png");
+  background-repeat: no-repeat; 
+  background-size: 50%;
+  background-position: center;
+}
+.option[data-value="Motel"] {
+  background-image: url("./images/motel.jpeg");
+  background-repeat: no-repeat; 
+  background-size: 50%;
+  background-position: center;
+}
+.option[data-value="House"] {
+  background-image: url("./images/house.jpeg");
+  background-repeat: no-repeat; 
+  background-size: 50%;
+  background-position: center;
+}
+.option[data-value="Apartment"] {
+  background-repeat: no-repeat; 
+  background-image: url("./images/apartment.jpeg");
+  background-size: 50%;
+  background-position: center;
+}
+.hidden-input {
+  position: absolute;
+  left: -9999px;
+}
+
+/* Style for datepicker */
+#custom-datepicker {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+#custom-datepicker input[type="text"] {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+#to-span {
+  margin: 0 10px;
+  //font-weight: bold;
+  font-size: $body-font-size;
+  font-family: $body-font;
+}
+
+/* Style for status message */
+#status-message {
+  margin-bottom: 10px;
+  font-weight: bold;
+  margin-top: 20px;
+  font-size: $body-font-size;
+  font-family: $body-font;
+
+}
+
+/* Style for submit button */
+#submit {
+  padding: 10px 20px;
+  background-color: $blue;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: $body-font-size;
+  font-family: $body-font;
+  border: 2px solid $white;
+}
+
+#submit:hover {
+  background-color: $yellow;
+}
+
+  // ------- RESULT -------//
+  #container {
+    background-color: white;
+  }
+  
+  #result-box {
+    //position: relative;
+    //z-index: 1;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 20px;
+    margin-top: 20px;
+    //align-content: start;
+  }
+  
+  #result {
+    padding: 20px;
+    //position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-size: $result-font-size;
+    font-family: $body-font;
+  }
+  
+  #result img {
+    border-radius: 10px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    //position: relative;
+    //z-index: 1;
+  }
+  
+  #result div:not(.total-cost) {
+    margin-bottom: 10px;
+  }
+  
+  .total-cost {
+    font-weight: bold;
+  }
+
+
+
+// HOTEl modal
+  #modal-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #007bff;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.3s;
+    z-index: 9999; /* Ensure the modal is on top */
+    text-align: center;
+  }
+  #modal-wrapper.active {
+    visibility: visible;
+    opacity: 1;
+    background-position: center;
+  }
+
+  #modal {
+    background: white;
+    padding: 20px;
+    width: 90%;
+    //text-align: center;
+    background-size: cover;
+    //align-items: flex-start;
+    //justify-content: flex-start;
+    border-radius: 15px;
+    height: 90%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    font-size: $result-font-size;
+    font-family: $body-font;
+    max-width: 580px;
+  }
+
+  #map {
+    //margin-top: 10px;
+    width: 250px;
+    height: 250px;
+    border-radius: 15px;
+    //margin-right: 20px;
+  }
+  
+  .show-map {
+    clear: both;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: $blue;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    border: 2px solid $white;
+  }
+  
+  .reserve-button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color:$blue;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-bottom: 10px;
+    border: 2px solid $white;
+  }
+  
+  #close-button {
+    position: absolute;
+    top: -5px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 50px;
+  }
+  .picture {
+    width: 250px;
+    height: 250px;
+    margin-right: 20px;
+    border-radius: 15px;
+    margin-bottom: 10px;
+    
+  }
+  .modal-content {
+    /* Existing styles for the modal content */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    font-size: $result-font-size;
+    font-family: $body-font;
+  }
+
+  .modal-content label[for="meal-select"] {
+    margin-right: 10px;
+    font-weight: bold;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  
+  #meal-select {
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  
+  .show-map:hover,
+  .reserve-button:hover {
+    background-color: $yellow;
+  }
+
+// ------- Reservation modal -------//
+#modal-wrapper-reservation {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width:100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #007bff;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s, opacity 0.3s;
+}
+
+#modal-reserve {
+  background: white;
+  padding: 20px;
+  border-radius: 5px;
+  width: 90%;
+  height: 90%;
+  text-align: center;
+  background-size: cover;
+  border-radius:  10px;
+  padding-top: 100px;
+  max-width: 580px;
+
+}
+#modal-content-reservation {
+    font-size: $result-font-size;
+    font-family: $body-font;
+    padding: 10px;
+    //background-color: #e8e1d5;
+    text-align: center;
+}
+
+#close-button-reservation {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  font-size: 50px; 
+}
+
+#modal-wrapper-reservation.active {
+  visibility: visible;
+  opacity: 1;
+  background-position: center;
+}
+
+#modal-reserve img.nz-tourism-logo-reservation {
+  width: 20%;
+  height: auto;
+  margin-bottom: 5px;
+  margin-top:  10px;
+}
+
+#modal-reserve h2 {
+  padding-bottom: 5px;
+  font-family: $header-font;
+  font-size: $subheader-font-size;
+  color: $blue;
+}
+
+// ---------FOOTER -----------
+
+footer {
+  background-color: white;
+  padding: 20px;
+  text-align: center;
+  font-family: $body-font;
+}
+
+.footer-top {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.footer-top img {
+  margin-right: 10px;
+  width: 30px;
+  height: 30px; 
+}
+
+.footer-top img.nz-logo {
+  width: 100px; 
+  height: auto; 
+}
+.footer-top .powered-by {
+  margin-right: 10px;
+  margin-left: 50px;
+}
+
+.footer-middle {
+  margin-bottom: 20px;
+}
+
+.footer-bottom {
+  color: gray;
+}

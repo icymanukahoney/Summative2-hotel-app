@@ -1,0 +1,16 @@
+@media screen and (min-width: 1024px) {
+
+    .options-container {
+        grid-template-columns: repeat(6, 1fr);
+    }
+
+    #result-box {
+        position: relative;
+        z-index: 1;
+        display: grid;
+        //grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 25px;
+        margin-top: 25px;
+      }
+}
